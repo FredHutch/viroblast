@@ -104,7 +104,7 @@ my (@accs, @accnums);
 my $esearch = "$utils/esearch.fcgi?" .
               "db=$db&usehistory=y&term=$query";
 
-my $esearch_result = get($esearch . $query);
+my $esearch_result = get($esearch);
 die "Couldn't get esearch_result!" unless defined $esearch_result;
 
 $esearch_result =~ 
