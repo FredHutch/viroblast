@@ -1,0 +1,5 @@
+0 0 * * * perl /var/www/html/cleanDir.pl > /dev/null 2>&1
+0 0 * * 0 perl /var/www/html/eutilsDownloadHIV_nucl.pl > /dev/null 2>&1
+0 0 * * 6 perl /var/www/html/eutilsDownloadVrl_nucl.pl > /dev/null 2>&1
+1 0 * * 0 perl /var/www/html/eutilsDownloadHIV_prot.pl > /dev/null 2>&1
+1 0 * * 6 perl /var/www/html/eutilsDownloadVrl_prot.pl > /dev/null 2>&1

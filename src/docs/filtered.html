@@ -1,0 +1,79 @@
+<html>
+<head>
+<TITLE>Low complexity filtering</TITLE>
+<link href="../stylesheets/viroblast.css"  rel="Stylesheet" type="text/css" />
+</head>
+<!-- Changed by: Sergei Shavirin,  2-Apr-1996 -->
+<BODY>  
+<div>
+
+    <div id="header">
+	    <div class="spacer">&nbsp;</div>    
+		<span class="logo">ViroBLAST</span>   
+    </div>
+    
+    <div id="nav">
+    	<span class='nav'><a class="nav" href="../viroblast.php">Home</a></span>
+		<span class='nav'><a class="nav" href=aboutviroblast.html>About ViroBLAST</a></span>
+		<span class='nav'><a href=viroblasthelp.html class="nav">Help</a></span>
+		<span class='nav'><a href=http://depts.washington.edu/ventures/UW_Technology/Express_Licenses/viroblast.php class="nav">Download</a></span>
+		&nbsp;
+	</div>
+    
+    <div id="indent">
+<h2 align=center>Low complexity filtering</h2>
+
+<p>
+The server does not filter your query sequence for low compositional
+complexity regions by default.  Low complexity regions commonly give 
+spuriously high scores that reflect compositional bias rather than 
+significant position-by- position alignment.  Filtering can elminate 
+these potentially confounding matches (e.g., hits against proline-rich 
+regions or poly-A tails) from the blast reports, leaving regions whose 
+blast statistics reflect the specificity of their pairwise alignment.
+Queries searched with the blastn program are filtered with DUST.  Other
+programs use SEG.  
+</p>
+
+<p>
+Low complexity sequence found by a filter program is substituted using the 
+letter "N" in nucleotide sequence (e.g., "NNNNNNNNNNNNN") and the letter "X" 
+in protein sequences (e.g., "XXXXXXXXX").  Users may turn on filtering by 
+checking the Low complexity box. 
+</p>
+
+
+<p><dl><dt>
+Reference for the DUST program:
+<p> 
+<dd>Hancock, J. M. and J. S. Armstrong (1994). SIMPLE34: an 
+improved and enhanced implementation for VAX and Sun computers of the 
+SIMPLE algorithm for analysis of clustered repetitive motifs in nucleotide 
+sequences.  Comput Appl Biosci 10:67-70. 
+
+<p><dt>Reference for the SEG program:
+<p>
+<dd>Wootton, J. C. and S. Federhen (1993).  Statistics of
+local complexity  in  amino acid sequences and sequence databases.
+Computers in Chemistry 17:149-163.
+
+<dd>Wootton, J. C. and S. Federhen (1996).  Analysis of 
+compositionally biased regions in sequence databases.  Methods in Enzymology
+266: 554-571.
+
+<p><dt>Reference for the role of filtering in search strategies:
+<p>
+<dd>Altschul, S. F., M. S. Boguski, W. Gish, 
+J. C. Wootton (1994). Issues in searching molecular sequence 
+databases. Nat Genet 6: 119-129.
+
+</dl>
+</div>
+	<div id="footer" align=center>
+		<p>&copy; 2005-2010 University of Washington. All rights reserved.
+		&nbsp;<a href=termsofservice.html>Terms of Service</a>
+		</p>
+	</div>
+</div>
+</body>
+</html>
