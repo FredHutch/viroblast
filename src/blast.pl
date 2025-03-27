@@ -42,16 +42,16 @@ if ($searchType eq 'advanced') {
 	$dbGeneticCode = shift @params;
 	$otherParam = shift @params;
 }
-
+my $dbPath = $ENV{'VIROBLAST_DB_PATH'};
 my %sourcefile = (
-	"HIV GenBank"             => "/var/www/html/viroblastDB/nucleotide/hiv/gbhiv.acc",
-	"Viral GenBank"           => "/var/www/html/viroblastDB/nucleotide/viral/gbvrl.acc",
-	"HIV-1 complete genome"   => "/var/www/html/viroblastDB/nucleotide/download_lanl/hiv_complete_genome/HIV1_FLT_2017_genome_DNA.acc",
-	"HIV-1 subtype reference" => "/var/www/html/viroblastDB/nucleotide/download_lanl/hiv_subtype_ref/HIV1_REF_2010_genome_DNA.acc",
-	"HIV-1 consensus"         => "/var/www/html/viroblastDB/nucleotide/download_lanl/hiv_consensus/HIV1_CON_2002_genome_DNA.acc",
-	"Vector"                  => "/var/www/html/viroblastDB/nucleotide/univec/vector.acc",
-	"HIV protein"             => "/var/www/html/viroblastDB/protein/hiv/hiv_prot.acc",
-	"Viral protein"           => "/var/www/html/viroblastDB/protein/viral/vrl_prot.acc",
+	"HIV GenBank"             => "$dbPath/nucleotide/hiv/gbhiv.acc",
+	"Viral GenBank"           => "$dbPath/nucleotide/viral/gbvrl.acc",
+	"HIV-1 complete genome"   => "$dbPath/nucleotide/download_lanl/hiv_complete_genome/HIV1_FLT_2017_genome_DNA.acc",
+	"HIV-1 subtype reference" => "$dbPath/nucleotide/download_lanl/hiv_subtype_ref/HIV1_REF_2010_genome_DNA.acc",
+	"HIV-1 consensus"         => "$dbPath/nucleotide/download_lanl/hiv_consensus/HIV1_CON_2002_genome_DNA.acc",
+	"Vector"                  => "$dbPath/nucleotide/univec/vector.acc",
+	"HIV protein"             => "$dbPath/protein/hiv/hiv_prot.acc",
+	"Viral protein"           => "$dbPath/protein/viral/vrl_prot.acc",
 );
 
 open(LOG, ">$uploadDir/$jobid.log");

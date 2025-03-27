@@ -1,6 +1,7 @@
 <?php
 $dataPath = "outputs"; /* relavent to htdocsRoot */
-$dbPath = "/var/www/html/viroblastDB";
+#$dbPath = "/viroblast_data";
+$dbPath = getenv('VIROBLAST_DB_PATH');
 $docBase = "docs";
 //$blastPath = "/opt/home/wdeng/blast/blastall/blast/bin";
 $htdocsRoot = "/var/www/html";
