@@ -49,7 +49,7 @@ RUN wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${BLAST_VERSION}/nc
 ENV PATH="/usr/local/blast/bin:${PATH}"
 
 # Set VIROBLAST_DB_PATH environment variable
-ENV VIROBLAST_DB_PATH="path_to_viroblastDB"
+ENV VIROBLAST_DB_PATH="/viroblast_data/viroblastDB"
 
 # Copy application files
 COPY ./src /var/www/html/
