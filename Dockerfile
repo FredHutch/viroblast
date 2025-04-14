@@ -73,6 +73,9 @@ RUN chmod 0644 /etc/cron.d/crontab
 # Apply cron job
 RUN crontab /etc/cron.d/crontab
 
+# create the directory to store log file to run the cron jobs
+RUN mkdir /var/log/cron
+
 # Expose port 80
 EXPOSE 80
 
