@@ -40,7 +40,7 @@ RUN cpanm LWP::Protocol::https
 ENV BLAST_VERSION=2.16.0
 
 # Download and install BLAST+
-RUN wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${BLAST_VERSION}/ncbi-blast-${BLAST_VERSION}+-x64-linux.tar.gz \
+RUN wget https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${BLAST_VERSION}/ncbi-blast-${BLAST_VERSION}+-x64-linux.tar.gz \
     && tar -xzf ncbi-blast-${BLAST_VERSION}+-x64-linux.tar.gz \
     && rm ncbi-blast-${BLAST_VERSION}+-x64-linux.tar.gz \
     && mv ncbi-blast-${BLAST_VERSION}+ /usr/local/blast
