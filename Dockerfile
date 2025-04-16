@@ -64,8 +64,8 @@ RUN chmod -R 755 /var/www/html/stats
 # Install Composer (PHP package manager)
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
-# copy crontab file into the container
-COPY crontab /etc/cron.d/crontab
+# copy crontab file into the container, replacing the placeholder with the actual path
+RUN cat crontab | sed "s/__REPLACE_ME__/${VIROBLAST_DB_PATH}/" > /etc/cron.d/crontab
 
 # set permissions for the crontab file
 RUN chmod 0644 /etc/cron.d/crontab
