@@ -65,7 +65,8 @@ RUN chmod -R 755 /var/www/html/stats
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 # copy crontab file into the container, replacing the placeholder with the actual path
-RUN cat crontab | sed "s/__REPLACE_ME__/${VIROBLAST_DB_PATH}/" > /etc/cron.d/crontab
+RUN mkdir -p /etc/cron.d
+RUN cat crontab | sed "s#__REPLACE_ME__#${VIROBLAST_DB_PATH}#" > /etc/cron.d/crontab
 
 # set permissions for the crontab file
 RUN chmod 0644 /etc/cron.d/crontab
