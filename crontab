@@ -1,5 +1,5 @@
 VIROBLAST_DB_PATH=__REPLACE_ME__
-PATH=$PATH:/usr/local/blast/bin:/usr/bin
+PATH=/usr/local/blast/bin:/usr/bin:/usr/sbin:/bin
 0 0 * * * perl /var/www/html/cleanDir.pl >> /var/log/cron/cleanDir.log 2>&1
 0 0 * * * perl /var/www/html/eutilsDownloadHIV_nucl.pl >> /var/log/cron/eutilsDownloadHIV_nucl.log 2>&1
 0 0 * * * perl /var/www/html/eutilsDownloadVrl_nucl.pl >> /var/log/cron/eutilsDownloadVrl_nucl.log 2>&1
