@@ -1,8 +1,8 @@
 VIROBLAST_DB_PATH=__REPLACE_ME__
 PATH=/usr/local/blast/bin:/usr/bin:/usr/sbin:/bin
-0 0 * * * root perl /var/www/html/cleanDir.pl >> /var/log/cron/cleanDir.log 2>&1
-0 0 * * * root perl /var/www/html/eutilsDownloadHIV_nucl.pl >> /var/log/cron/eutilsDownloadHIV_nucl.log 2>&1
-0 0 * * * root perl /var/www/html/eutilsDownloadVrl_nucl.pl >> /var/log/cron/eutilsDownloadVrl_nucl.log 2>&1
-1 0 * * * root perl /var/www/html/eutilsDownloadHIV_prot.pl >> /var/log/eutilsDownloadHIV_prot.log 2>&1
-1 0 * * * root perl /var/www/html/eutilsDownloadVrl_prot.pl >> /var/log/eutilsDownloadVrl_prot.log 2>&1
+0 0 * * * root perl /var/www/html/cleanDir.pl > /var/log/cron/cleanDir.log 2>&1
+0 0 * * * root perl /var/www/html/eutilsDownloadHIV_nucl.pl > /var/log/cron/eutilsDownloadHIV_nucl.log 2>&1
+0 0 * * * root perl /var/www/html/eutilsDownloadVrl_nucl.pl > /var/log/cron/eutilsDownloadVrl_nucl.log 2>&1
+1 0 * * * root perl /var/www/html/eutilsDownloadHIV_prot.pl > /var/log/eutilsDownloadHIV_prot.log 2>&1
+1 0 * * * root perl /var/www/html/eutilsDownloadVrl_prot.pl > /var/log/eutilsDownloadVrl_prot.log 2>&1
 
