@@ -146,7 +146,6 @@ for($retstart = 0; $retstart < $Count; $retstart += $retmax) {
 	}else {
 		print "No result: $efetch\n";
 	}	
-	last;
 }
 close TEMP;
 close ERR;

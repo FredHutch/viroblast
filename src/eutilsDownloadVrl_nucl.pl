@@ -135,7 +135,6 @@ for($retstart = 0; $retstart < $Count; $retstart += $retmax) {
 			}		
 		}		
 	}  
-	last;
 }
 close TEMP;
 close ERR;
